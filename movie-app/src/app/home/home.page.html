@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Movie
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-list>
+    <ion-item *ngFor="let movie of movies">
+      <h2>{{movie.Title}}</h2>
+      <p>{{movie.Year}}</p>
+      <img src="{{movie.Poster}}">
+    </ion-item>
+  </ion-list> -->
+
+  <ion-card *ngFor="let movie of movies"> 
+    <img src="{{movie.Poster}}">
+    <ion-card-header>
+      <ion-card-subtitle>{{movie.Year}}</ion-card-subtitle>
+      <ion-card-title>{{movie.Title}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
